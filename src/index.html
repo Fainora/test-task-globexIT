@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="search-container">
+        <form action="" method="GET">
+            <input name="term" type="text" id="search">
+            <button type="submit" class="btn-search" onclick="search()"><div class="magnifying-glass"></div></button>
+        </form>
+    </div>
+
+    <div id="pop-up" onclick="closeForm(event)">
+        <div class="modal-content">
+            <?xml version="1.0" ?><svg id="close" data-name="Capa 1" id="Capa_1" viewBox="0 0 20 19.84" xmlns="http://www.w3.org/2000/svg"><path d="M10.17,10l3.89-3.89a.37.37,0,1,0-.53-.53L9.64,9.43,5.75,5.54a.37.37,0,1,0-.53.53L9.11,10,5.22,13.85a.37.37,0,0,0,0,.53.34.34,0,0,0,.26.11.36.36,0,0,0,.27-.11l3.89-3.89,3.89,3.89a.34.34,0,0,0,.26.11.35.35,0,0,0,.27-.11.37.37,0,0,0,0-.53Z"/></svg>
+            <div id="name"></div>
+            <table>
+                <tr>
+                    <td class="title">Телефон:</td>
+                    <td><div id="phone" class="info"></div></td>
+                </tr>
+                <tr>
+                    <td class="title">Почта:</td>
+                    <td><div id="email" class="info"></div></td>
+                </tr>
+                <tr>
+                    <td class="title">Дата приема:</td>
+                    <td><div id="hire_date" class="info"></div></td>
+                </tr>
+                <tr>
+                    <td class="title">Должность</td>
+                    <td><div id="position_name" class="info"></div></td>
+                </tr>
+                <tr>
+                    <td class="title">Подразделение</td>
+                    <td><div id="department" class="info"></div></td>
+                </tr>
+            </table>
+
+            <div class="additional">
+                Дополнительная информация:
+                <div class="address">
+                    Адрес: 
+                    <div id="address" class="info"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-container">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script/getUsers.js"></script>
+    <script src="script/search.js"></script>
+    <script src="script/modal.js"></script>
+</body>
+</html>

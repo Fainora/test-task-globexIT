@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #FFFFFF;
+    --text: #050000;
+    --text-additional: #9E9EA0;
+    --main-color: #B34BCE;
+    --secondary-color: #BB94BA;
+}
+
+body{
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* SEARCH */
+#search-container {
+    margin-bottom: 30px;
+}
+#search-container form {
+    position: relative;
+}
+#search-container input, 
+#search-container button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+#search {
+    height: 33px;
+    width: 740px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.13);
+    margin-top: 35px;
+    padding: 0 40px 0 15px;
+}
+.btn-search {
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 20px;
+}
+.magnifying-glass {
+    width: 10px;
+    height: 10px;
+    border: 0.1em solid var(--main-color);
+    position: relative;
+    border-radius: 100%;
+    font-size: 20px;
+}
+.magnifying-glass::before {
+    content: "";
+    background: var(--main-color);
+    position: absolute;
+    right: -5.5px;
+    bottom: -3.5px;
+    width: 5px;
+    height: 1.5px;
+    transform: rotate(45deg);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+
+/* CARD */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 210px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+#card {
+    width: calc(250px - 32px);
+    padding: 25px 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+svg {
+    fill: var(--secondary-color);
+}
+#card .name {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.short-info {
+    color: var(--text-additional);
+    display: flex;
+    align-items: center;
+    margin-left: -3px;
+}
+#card .phone {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+#card .phone svg {
+    height: 16px;
+    padding-right: 7px;
+}
+#email {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    word-wrap: none;
+}
+#card .email {
+    text-decoration: underline;
+    font-size: 10px;
+}
+#card .email svg {
+    height: 14px;
+    padding: 0 10px 0 2px;
+}
+
+
+/* Modal */
+#pop-up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 50, 100, 0.2);
+}
+#close {
+    width: 20px;
+    padding: 5px;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    fill: var(--bg);
+    position: absolute;
+    top: -15px;
+    left: calc(360px / 2);
+}
+.modal-content {
+    background-color: var(--bg);
+    margin: 84px auto;
+    padding: 31px 15px;
+    width: 360px;
+    position: relative;
+    border-radius: 10px;
+    font-size: 11px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.modal-content td {
+    padding-bottom: 11px;
+}
+.info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+    color: var(--text-additional);
+}
+.modal-content #name {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 34px;
+    padding-left: 3px;
+}
+.modal-content #phone {
+    font-size: 12px;
+}
+.modal-content #phone, .modal-content #email {
+    text-decoration: underline;
+}
+.modal-content .additional {
+    margin-top: 21px;
+}
+.modal-content .additional .address {
+    margin-top: 5px;
+    color: var(--text-additional);
+    display: flex;
+}
+.modal-content #address {
+    margin-left: 5px;
+}
+.title {
+    width: 170px;
+}
